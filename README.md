@@ -14,3 +14,4 @@
 ## Ejecutar proyecto
 
 -   Ejecutar `npm run dev` o  `npm run watch` para ejecutar el proyecto
+-   En otra terminal dentro del proyecto ejecutar `php artisan serve`
