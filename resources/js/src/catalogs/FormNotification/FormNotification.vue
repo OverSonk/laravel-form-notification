@@ -1,7 +1,7 @@
 <template >
   <div class="row h-screen align-items-center justify-content-center">
     <div class="col-12 col-md-10 col-lg-8">
-      <div class="card py-4">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title text-center">
             Formualrio para crear notificaciones
@@ -56,10 +56,10 @@
               <has-error :form="form" field="subject" />
             </div>
 
-            <div class="form-group">
+            <div class="form-group position-relative">
               <input
                 type="file"
-                class="form-control"
+                class="form-control position-absolute"
                 name="file"
                 id="file"
                 ref="inputFile"
@@ -67,6 +67,7 @@
                 v-on:change="loadFile"
               />
               <label for="file" class="custom-input-file">{{ fileName }}</label>
+              <has-error :form="form" field="file" />
             </div>
 
             <div class="row">
@@ -89,7 +90,7 @@
         </div>
       </div>
     </div>
-    <vue-element-loading :active="loading" is-full-screen />
+    <!-- <vue-element-loading :active="loading" is-full-screen /> -->
   </div>
 </template>
 
@@ -185,7 +186,6 @@ export default {
 <style lang="scss">
 #file {
   opacity: 0;
-  z-index: 1 !important;
   width: 100%;
   height: 50px;
   cursor: pointer !important;
@@ -200,7 +200,6 @@ export default {
   padding: 10px;
   text-align: center;
   cursor: pointer !important;
-  bottom: 25px;
   &:hover {
     color: #007bff;
     border: 2px dashed #007bff;

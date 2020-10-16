@@ -1,6 +1,10 @@
 body {
     background: #dcdcdc;
+    @media (max-width: 400px) { 
+        position:fixed
+    }
 }
+
 .error-404 {
     padding: 40px 15px;
     text-align: center;
