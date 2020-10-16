@@ -18,7 +18,7 @@ mix
       chunkFilename: "js/[name].[chunkhash].js"
     }
   })
-  
+
   .sass("resources/scss/app.scss", "public/css")
   .options({
     processCssUrls: false,

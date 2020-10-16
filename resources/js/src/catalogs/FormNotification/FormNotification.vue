@@ -90,7 +90,7 @@
         </div>
       </div>
     </div>
-    <loading :active.sync="loading" :is-full-page="true"></loading>
+    <vue-element-loading :active="loading" is-full-screen />
   </div>
 </template>
 
@@ -98,8 +98,7 @@
 import Form from "vform";
 import Swal from "sweetalert2";
 import axios from "axios";
-import Loading from "vue-loading-overlay";
-import "vue-loading-overlay/dist/vue-loading.css";
+import VueElementLoading from "vue-element-loading";
 
 export default {
   name: "createNotification",
@@ -114,7 +113,7 @@ export default {
     loading: false,
   }),
   components: {
-    Loading,
+    VueElementLoading,
   },
   computed: {
     fileName: {
