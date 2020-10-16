@@ -15,3 +15,9 @@
 
 -   Ejecutar `npm run dev` o  `npm run watch` para ejecutar el proyecto
 -   En otra terminal dentro del proyecto ejecutar `php artisan serve`
+
+## Requisitos
+
+- PHP Versión ^7.3.5
+- Node v12.18.1
+- npm 6
