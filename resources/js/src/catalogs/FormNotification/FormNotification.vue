@@ -1,7 +1,7 @@
 <template >
   <div class="row h-screen align-items-center justify-content-center">
     <div class="col-12 col-md-10 col-lg-8">
-      <div class="card">
+      <div class="card py-4">
         <div class="card-body">
           <h5 class="card-title text-center">
             Formualrio para crear notificaciones
@@ -57,21 +57,20 @@
             </div>
 
             <div class="form-group">
-              <label for="file">{{ fileName }}</label>
               <input
-                name="file"
                 type="file"
                 class="form-control"
+                name="file"
                 id="file"
                 ref="inputFile"
                 placeholder="Archivo"
                 v-on:change="loadFile"
               />
-              <has-error :form="form" field="file" />
+              <label for="file" class="custom-input-file">{{ fileName }}</label>
             </div>
 
             <div class="row">
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-md-6 mb-3 mb-sm-0">
                 <button
                   type="button"
                   class="btn btn-danger btn-block"
@@ -118,7 +117,7 @@ export default {
   computed: {
     fileName: {
       get() {
-        if (!!this.form.upload_file) {
+        if (!!this.form.file) {
           return this.$refs.inputFile.files[0].name;
         } else {
           return "Subir archivo";
@@ -183,3 +182,28 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+#file {
+  opacity: 0;
+  z-index: 1 !important;
+  width: 100%;
+  height: 50px;
+  cursor: pointer !important;
+  padding: 0;
+}
+.custom-input-file {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border: 1px dashed #000;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer !important;
+  bottom: 25px;
+  &:hover {
+    color: #007bff;
+    border: 2px dashed #007bff;
+  }
+}
+</style>
