@@ -1,4 +1,4 @@
-# Formulario para crear notificciones - Laravel & Vue JS 2
+# Formulario para crear notificaciones - Laravel & Vue JS 2
 
 ## Instalación
 
@@ -9,6 +9,7 @@
 -   Ejecutar `composer install` para instalar dependencias de Laravel
 -   Ejecutar `php artisan key:generate` para generar una key de aplicación
 -   Ejecutar `php artisan migrate` crear estructura base con datos
+-   Ejecutar `php artisan storage:link`
 -   Ejecutar `npm install` para instalar dependencias del frontend
 
 ## Ejecutar proyecto
